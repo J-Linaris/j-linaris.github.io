@@ -37,7 +37,7 @@ sudo virt-customize -a "${VM_DIR_ARM}/arm64_img.qcow2" --root-password password:
 
 in order to reset the password from the local machine using libvirt.
 
-2. cloud-init trying to communicate with a metadata server: Everytime I booted the VM, it kept displaying multiple messages about cloud-init not being able to connect to a server. Later, with the help of Google Gemini this time, I figured it out that this command had to do with the expectation brought when we upload VMs in actual production servers, that try to communicate with metadata servers. This increased considerably my VM's booting time and, therefore, I shut this service down by simply running the command: `sudo virt-customize -a "${VM_DIR_ARM}/arm64_img.qcow2" --run-command "touch /etc/cloud/cloud-init.disabled"`
+2. cloud-init trying to communicate with a metadata server: Everytime I booted the VM, it kept displaying multiple messages about cloud-init not being able to connect to a server. Later, with the help of Google Gemini this time, I figured it out that this command had to do with the expectation brought when we upload VMs in actual production servers, that try to communicate with metadata servers. This increased considerably my VM's booting time and, therefore, I shut this service down by simply running the command after booting into the VM: `touch /etc/cloud/cloud-init.disabled`
 
 
 These two errors were great for me to get to know more about how the VM is set up and the possible bugs when uploading a local VM.
