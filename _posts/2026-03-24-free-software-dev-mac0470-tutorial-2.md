@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Free Software Development (MAC0470) Tutorial 1
+title: Free Software Development (MAC0470) Tutorial 2
 date: 2026-03-24 13:14 -0300
 description: Comments and difficulties regarding my experience in Tutorial 2 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP
 image: 
