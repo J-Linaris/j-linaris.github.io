@@ -27,7 +27,7 @@ In order to learn how to do these three major tasks, I followed the sequence of 
 
 Once again, I followed the second tutorial created by FLOSS at USP ( [FLUSP](https://flusp.ime.usp.br/) ) from the series of developing for the IIO subsytem. The tutorial is available [here](https://flusp.ime.usp.br/kernel/build-linux-for-arm-kw/).
 
-## Experience on the tutorial
+## Experience in the tutorial
 
 Although this tutorial had 5 steps, I only faced difficulties (a lot of them btw) on the last step, something not really expected. Anyway, let's dive deeper on these challenges:
 

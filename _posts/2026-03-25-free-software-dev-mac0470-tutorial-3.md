@@ -18,21 +18,21 @@ Now that we have set the envrionment and learned how to configure, build and boo
 
 Once again, I followed the series of tutorials created by FLOSS at USP ( [FLUSP](https://flusp.ime.usp.br/) ) regarding the development for the IIO subsytem. The tutorial is available [here](https://flusp.ime.usp.br/kernel/modules-intro/).
 
-## Experience on the tutorial
+## Experience in the tutorial
 
 Chockingly, in this tutorial, I didn't face any major error that occupied several hours to fix/understand it! However, it would be great to register, briefly, what is the process of creating and implementing a module in the linux kernel, since it is so vital to what I'll be doing next (participating on the development of a module).
 
 ### Module creation and Kernel configuration
 
-Basically, first, we actually create and write the file in the kernel's module directory (such as /drivers/misc). Then, we have to create what we call the configuration symbols, which consist, in an abstract way, of an object containing several attributes of the module, that we also define. The configuration symbols are all set in the Kconfig file. 
+Basically, first, we actually create and write the file in the kernel's module directory (such as `/drivers/misc`). Then, we have to create what we call the configuration symbols, which consist, in an abstract way, of an object containing several attributes of the module, that we also define. The configuration symbols are all set in the `Kconfig` file. 
 
-In order to build the module, we also add it to the Makefile of the directory it was created in. Now, we run the make command using menuconfig in order to enable the module we just created. This means that we are adding the Kconfig settings we did to the .config file, which kbuild Makefiles will use to compile the code and decide which objects must be included in the monolithic kernel image and which objects should be modules. Therefore, in this menuconfig part, we signal that we want our module to actually be a module.
+In order to build the module, we also add it to the `Makefile` of the directory it was created in. Now, we run the `make` command using `menuconfig` in order to enable the module we just created. This means that we are adding the `Kconfig` settings we did to the `.config` file, which `kbuild` `Makefiles` will use to compile the code and decide which objects must be included in the monolithic kernel image and which objects should be modules. Therefore, in this `menuconfig` part, we signal that we want our module to actually be a module.
 
 Finally, we build the kernel in order to build the modules and kernel all together. 
 
 ### Installing and Booting the modules
 
-After this compilation, we install the modules directly into the image of the kernel and, then, boot the VM using this new kernel (this is one way to do it). The other way to install the modules into the VM is to simply, after compiling them with `kw build` and doing the whole configuration part, copy and paste them into the correct directory in the VM, while the VM is running, and include them into the module tracking files for easily managing dependencies (with `depmod` and `modprobe`). Then, we can use `modprrobe` to easily run and stop our modules.
+After this compilation, we install the modules directly into the image of the kernel and, then, boot the VM using this new kernel (this is one way to do it). The other way to install the modules into the VM is to simply, after compiling them with `kw build` and doing the whole configuration part, copy and paste them into the correct directory in the VM, connected to the VM, and include them into the module tracking files for easily managing dependencies (with `depmod`). Then, we can use `modprrobe` to easily run and stop our modules.
 
 
 ### Minor dependencie issue

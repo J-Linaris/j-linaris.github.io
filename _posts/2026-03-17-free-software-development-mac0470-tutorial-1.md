@@ -22,7 +22,7 @@ This tutorial has the goal of setting up the environment for developing Linux Ke
 
 I followed the tutorial created by FLOSS at USP ( [FLUSP](https://flusp.ime.usp.br/) ) available [here](https://flusp.ime.usp.br/kernel/qemu-libvirt-setup/).
 
-## Experience on the tutorial
+## Experience in the tutorial
 
 ### Step 1: Creating the VM
 
