@@ -2,7 +2,7 @@
 layout: post
 title: Free Software Development (MAC0470) Tutorial 2
 date: 2026-03-24 13:14 -0300
-description: Comments and difficulties regarding my experience in Tutorial 2 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP
+description: '"Building and booting a custom Linux Kernel for ARM using kw", tutorial 2, comments and difficulties regarding my experience in this tutorial of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP' 
 image: 
 category: academic
 tags:

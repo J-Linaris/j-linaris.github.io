@@ -2,7 +2,7 @@
 layout: post
 title: Free Software Development (MAC0470) Tutorial 5 and 6
 date: 2026-04-05 13:03 -0300
-description: Comments and difficulties regarding my experience in Tutorial 4 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP 
+description: '"Sending patches by email with git" and "Sending patches with git and a USP email", respectively, tutorials 5 and 6, comments and difficulties regarding my experience in these tutorials of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP' 
 image: 
 category: academic
 tags: 
@@ -14,15 +14,15 @@ sitemap: true
 
 ## Introduction
 
-Now that we know more about Linux Character Devices, it is time for us to learn how to upload our contributions to the linux kernel. These two tutorials are more about setting things up for sending contributions to the kernel, hence, I grouped both tutorials in one post given that they are the two parts of this setup.
+Now that we know more about Linux Character Devices, it is time for us to learn how to upload our contributions to the linux kernel. These two tutorials are more about setting things up for sending contributions to the kernel, hence, I grouped both tutorials in one post given that they both relate to this setup.
 
 Once again, I followed the series of tutorials created by FLOSS at USP ( [FLUSP](https://flusp.ime.usp.br/) ) regarding the development for the IIO subsytem. Tutorial 5 is available [here](https://flusp.ime.usp.br/git/sending-patches-by-email-with-git/) and Tutorial 6, [here](https://flusp.ime.usp.br/git/sending-patches-with-git-and-a-usp-email/).
 
 ## Experience in tutorial 5
 
-This tutorial is about configuring git to send emails through git itself (contributions for the kernel (and git) are sent via email instead of "fancy UIs", as called in the tutorial, such as Git Hub or Git Lab). The steps to setup this email sending process through git were:
+This tutorial is about configuring git to send emails through git itself (contributions for the kernel (and git) are sent via email instead of "fancy UIs", as called in the tutorial, such as Git Hub or Git Lab). We were told just to read through this part, since we will have to take some additional steps given we are using an USP email. To setup this email sending process through git, the steps would be:
 
-1. Configure an App Password for my personal email account `joaolinaris@gmail.com`
+1. Configure an App Password for my personal email account
 2. Configure git to use this email to send emails
 
 The idea is that we create a patch of our modifications in a file and we send this git commit file using our email to specific review accounts using `git send-email`. All steps of this tutorial were completed without any concern. It was much more of a conceptual tutorial than anything.
@@ -53,7 +53,7 @@ nano emailproxy-container/emailproxy.config
 ```
 
 ```bash
-#------RUNNING THE EMAIL PROXY CONTAINER-------
+#------BUILDING THE EMAIL PROXY CONTAINER-------
 
 # Enter the container directory
 cd /home/lk_dev/emailproxy-container/

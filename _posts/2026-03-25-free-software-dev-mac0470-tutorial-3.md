@@ -2,7 +2,7 @@
 layout: post
 title: Free Software Development (MAC0470) Tutorial 3
 date: 2026-03-25 21:52 -0300
-description: Comments and difficulties regarding my experience in Tutorial 2 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP
+description: '"Introduction to Linux Kernel build configuration and modules", tutorial 3, comments and difficulties regarding my experience in this tutorial of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP' 
 image: 
 category: academic
 tags: 

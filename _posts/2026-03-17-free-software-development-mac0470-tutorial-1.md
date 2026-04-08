@@ -2,7 +2,7 @@
 layout: post
 title: Free Software Development (MAC0470) Tutorial 1
 date: 2026-03-17 20:52 -0300
-description: Comments and difficulties regarding my experience in Tutorial 1 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP
+description: '"Setting a test environment for Linux Kernel Dev using QEMU and libvirt", tutorial 1, comments and difficulties regarding my experience in this tutorial of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP' 
 image: 
 category: academic
 tags: 

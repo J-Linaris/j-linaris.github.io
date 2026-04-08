@@ -2,7 +2,7 @@
 layout: post
 title: Free Software Development (MAC0470) Tutorial 4   
 date: 2026-04-04 19:59 -0300
-description: Comments and difficulties regarding my experience in Tutorial 4 of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP
+description: '"Introduction to Linux Kernel Character Device Drivers", tutorial 4, comments and difficulties regarding my experience in this tutorial of the discipline "Free and Open Source Software Development" (MAC0470) of IME-USP' 
 image: 
 category: academic
 tags: 
