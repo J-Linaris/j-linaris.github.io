@@ -75,7 +75,7 @@ static int random_function(...){
 }
 ```
 
-### Modifying adxrs290.c
+### adxrs290.c modification
 
 An interesting factor about the changes in this file is that we had to change it a decent amount of times before it was accepted: it got up to V5. At first, we simply replaced the mutex statements with guard locks. However, we missed one minor detail: one simple return statement missing, **not indicated by neither VS Code nor the actual compiler when we ran it**.
 
@@ -85,7 +85,7 @@ As previously said, it couldn't be different, this was the gentle comment we rec
 
 Really inspiring. After fixing the bug and sending it again, there were some style preferences of the reviewers we didn't know existed (such as number of empty spaces for the identation) and incorporated into the code and that was it. Although it was a long proccess, it was much more about getting to know the pattern the reviewers implement in the code than anything else. 
 
-### intel-qep.c
+### intel-qep.c modification
 
 The proccess of getting the commit accepted was a bit shorter than the one for the prior file, mainly, because we were able to learn and apply the reviewers recommmendations about code style already in the file. There were three versions of the patch, which I'll briefly describe here:
 1. Introduced my changes replacing mutex with *scoped_guard* with *comments* explaining what scoped_guard does. After the changes, the funciton would look something like:
