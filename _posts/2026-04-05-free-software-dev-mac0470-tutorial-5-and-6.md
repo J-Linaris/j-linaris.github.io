@@ -119,7 +119,7 @@ The first time we run this command, we will be prompted to enter a password in a
 
 ```bash
 <rest of output>
-Password for 'smtp://davidbtadokoro%40ime.usp.br@127.0.0.1:2587':
+Password for 'smtp://jplinaris%40usp.br@127.0.0.1:2587':
 ```
 
 This does NOT require the USP email account password. It is of local usage, hence, you can define any (just remember it for future uses). After setting your password, you must authenticate using the url provided in the container log but it will only work if you belong to the group of acceptable clients. The whole process worked out great, with the only problem that I wasn't in the group when I first tried, which introduced a bit of overhead.
