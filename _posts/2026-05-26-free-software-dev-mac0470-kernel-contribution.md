@@ -83,7 +83,7 @@ As previously said, it couldn't be different, this was the gentle comment we rec
 
 "Two people as authors and none of them even compiled it?"
 
-Really inspiring. After fixing the bug and sending it again, there were some style preferences of the reviewers we didn't know existed (such as number of empty spaces for the identation) and incorporated into the code and that was it. Although it was a long proccess, it was much more about getting to know the pattern the reviewers implement in the code than anything else. 
+Really inspiring. After fixing the bug and sending it again, there were some style preferences of the reviewers we didn't know existed (such as number of empty spaces for the identation) and incorporated into the code and that was it. Although it was a long proccess, it was much more about getting to know the pattern the reviewers implement in the code than anything else. For getting to know more about the whole development process of this file, I highly recommend you to check out my [pair's post](https://guilherme-dna.github.io/posts/kernel-contr/) about this.
 
 ### intel-qep.c modification
 
