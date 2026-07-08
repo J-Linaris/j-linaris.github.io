@@ -18,7 +18,7 @@ The end for my series on "Free and Open Source Software Development" (MAC0470) o
 
 ## The contribution: Change in packaging
 
-A good way for us just to get to know how all this contribution process works is to let us fix deprecations (that's exactly what we did). Just like previously, we decided each one would take a package to modify, as this is better to accelerate our pace.
+A good way for us just to get to know how all this contribution process works is to let us fix deprecations (that's exactly what we did). As previously done, we decided each one would take a package to modify, as this is better to accelerate our pace.
 
 In this context, it is important to know that there are two types of debian packages: the source and the binary (.deb) packages. The source contains all the actual source code and a `debian/` folder containing the content necessary for packaging. Hence, the source package can generate multiple binary packages in its construction. We will foccus, in this contribution, in source packages.
 
@@ -29,11 +29,11 @@ Actually, we will modify the `control` file in `debian/`. In this context, three
 
 As you may imagine, most of the packages aren't obligatory in Debian installation, therefore, in `control`, we add `Priority:optional` to indicate this.
 
-**Contribution:** Currently, however, Debian tools have incorporated 'optional' as the standard value for the `Priority` field. Hence, there is no need anymore to restate that in the file, so the task was to delete it.
+**Contribution:** Currently, Debian tools have incorporated 'optional' as the standard value for the `Priority` field. Hence, there is no need anymore to restate that in the file, so the task was to delete it.
 
 Before doing this, I had to create an account in Debian Brazil community's [Salsa](https://salsa.debian.org/debian-brasil-team), the gitlab instance used for debian development, choose a package to contribute to and clone the repo in my local machine. The tutorial perfectly described how to do this initial setup. 
 
-To select the package, I searched for the first one among the recommended packages that contained Golang in its named and took it. In this process, I ended up choosing a POP3 client package for golang, called "golang-github-knadh-go-pop3". POP3 is a protocol (*Post Office Protocol*) used to enable email clients. It basically lets the client receive all entries for the user in the mail server linearly using TCP ports. To know more about, make sure to read [its wiki](https://pt.wikipedia.org/wiki/Post_Office_Protocol).
+To select the package, I searched for the first one among the recommended packages that contained Golang in its named and took it. By this, I ended up choosing a POP3 client package for golang, called "golang-github-knadh-go-pop3". POP3 is a protocol (*Post Office Protocol*) used to enable email clients. It is used, basically, to enable a client to receive all entries for a user in the mail server linearly using TCP ports. To know more about, make sure to read [its wiki](https://pt.wikipedia.org/wiki/Post_Office_Protocol).
 
 Moving forward, it all actually started with the change:
 
@@ -59,16 +59,16 @@ golang-github-knadh-go-pop3 (1.0.0-2) UNRELEASED; urgency=medium
 (...)
 ```
 
-Indeed, soon, I'll be the author of the last change made in golang-github-knadh-go-pop3 debian package ;) 
+That's it! Now, we are the authors of the last change made in golang-github-knadh-go-pop3 debian package ;) 
 
 Finally, in theory, we simply push using `gbp push --debian-tag=''`. However, when I ran it, a invalid refs/head error popped. Then, I noticed that it was trying to push to an `upstream` branch, although I was in `debian/sid` branch. So, I just added the flag `--upstream-branch='debian/sid'` and, again, an error.
 
 It said the remote counterpart had changes I didn't have locally (which didn't make any sense), so I spent around 10 minutes trying to fix it. After this period, I simply tried to create a merge request and, guess what: THE COMMITS WERE THERE. Sometimes, git simply works in misterious ways...
 
-After all, I have a merge request. Now, the reviewers approval is the only thing pending, but, as I talked to him, apparently, there is nothing more I can do. It is worth stating that executing `gbp buildpackage <my_package_repo_clone_path>` lintian is failing due to the `UNRELEASED` tag in the changelog, which was expected to be `unstable` (referring to the debian release it would be applied on). This will be changed by the reviewer futurely when he accepts the merge request.
+After all, my merge request was approved. The whole process took around 8 hours of the **same day**. Notice how much faster the reviewer was compared to the ones of Linux Kernel. It is worth stating that the code of my merge request failed when executing `gbp buildpackage <my_package_repo_clone_path>`. The reason was that lintian required a debian release among `unstable`,`test` and `stable` instead of the `UNRELEASED` tag in changelog file.This, however, was changed by the reviewer himself when he applied the merge request.
 
 ## Conclusion
 
-I can not describe how much better it is to contribute to Debian compared to the Linux Kernel. Not because of the code itself, but due to how welcoming and friendly is the Debian community. They are always willing to help and provide extensive documentation, two profound advantages over Linux Kernel reviewers. It was really nice to get in contact with this new community and I really look forward to be a member of it futurely (I changed from Ubuntu to Debian 13 as a proof of commitment).
+I can not describe how much better the process of contributing to Debian is compared to the Linux Kernel one. Not because of the code itself, but, mostly, due to how welcoming and friendly is the Debian community. They are always willing to help and provide extensive documentation, two profound advantages over Linux Kernel reviewers. It was really nice to get in contact with this new community and I really look forward to be a member of it futurely (I changed from Ubuntu to Debian 13 as a proof of commitment).
 
 My huge thanks to both Guilherme Dias, my pair, and Carlos Henrique, the reviewer. This subject has really expanded my notion about free software and really made me much more interested than I was when it started, thanks, as well, to [FLUSP](https://flusp.ime.usp.br/)! 
